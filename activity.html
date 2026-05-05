@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity Coach</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="top-nav-shell">
+      <nav class="top-nav">
+        <a href="./index.html" class="brand">Attention Toolkit</a>
+        <div class="nav-links">
+          <a href="./index.html" class="nav-link">Home</a>
+          <a href="./tracker.html" class="nav-link">Camera Tracker</a>
+          <a href="./activity.html" class="nav-link nav-link-active" aria-current="page">Activity Coach</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero">
+        <p class="eyebrow">Learning Support</p>
+        <h1>Reading + Activity Coach</h1>
+        <p class="lede">
+          Practice with a reading passage while tracking keyboard and mouse patterns. Switch between Focus mode and Rest mode to match energy.
+        </p>
+      </section>
+
+      <section class="activity-grid">
+        <article class="reading-card">
+          <h2>Reading Text</h2>
+          <p>
+            Effective studying is not about forcing nonstop effort. It is about matching intensity to your current energy and attention.
+            In focus periods, try one small target at a time and remove extra tabs or notifications. In rest periods, step away, breathe,
+            and reset before coming back to the next task.
+          </p>
+          <p>
+            If your attention drifts, that is data, not failure. Use short loops: read one section, summarize it in one sentence, then continue.
+            If the section feels heavy, split it into smaller chunks and celebrate completion of each chunk.
+          </p>
+          <p>
+            Students with ADHD often benefit from visible structure: short timers, checklists, and kind reminders. The goal is not perfect stillness.
+            The goal is steady progress with less friction.
+          </p>
+        </article>
+
+        <aside class="coach-panel">
+          <div class="mode-card">
+            <span class="status-label">Current mode</span>
+            <strong id="modeBadge" class="mode-badge mode-focus">Focus mode</strong>
+            <p id="modeSummary" class="fine-print mode-summary">
+              Focus mode uses a longer session, faster idle nudges, and encourages reading momentum.
+            </p>
+            <div class="mode-actions">
+              <button id="focusModeButton" class="button button-primary" type="button">Set Focus Mode</button>
+              <button id="restModeButton" class="button button-secondary" type="button">Set Rest Mode</button>
+            </div>
+          </div>
+
+          <div class="status-grid">
+            <div class="metric-card">
+              <span class="status-label">Session timer</span>
+              <strong id="sessionTimer">20:00</strong>
+            </div>
+            <div class="metric-card">
+              <span class="status-label">Learning activity</span>
+              <strong id="activityState">Waiting for input</strong>
+            </div>
+            <div class="metric-card">
+              <span class="status-label">Idle time</span>
+              <strong id="idleValue">0s</strong>
+            </div>
+            <div class="metric-card">
+              <span class="status-label">Last input</span>
+              <strong id="lastInput">Never</strong>
+            </div>
+          </div>
+
+          <div class="coach-note-card">
+            <h2>Coach Note</h2>
+            <p id="coachNote" class="fine-print">
+              Focus mode is active. Keep a short goal and continue reading.
+            </p>
+          </div>
+
+          <div class="coach-note-card">
+            <h2>Suggested Action</h2>
+            <p id="suggestedAction" class="fine-print">
+              Pick one paragraph, read it fully, then summarize it in one sentence.
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="./activity.js"></script>
+  </body>
+</html>
